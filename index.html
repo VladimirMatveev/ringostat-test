@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Ringostat Test</title>
+</head>
+<body>
+
+<h1>Ringostat test</h1>
+<p>Тестова сторінка</p>
+
+<script type="text/javascript">
+    (function (d,s,u,e,p) {
+      p=d.getElementsByTagName(s)[0],
+      e=d.createElement(s),
+      e.async=1,
+      e.src=u,
+      p.parentNode.insertBefore(e, p);
+    })(document, 'script', 'https://script.ringostat.com/v4/24/24d33463be30ed16ddd09a96b34b99911506b1a9.js');
+
+    var pw = function() {
+        if (typeof(ringostatAnalytics) === "undefined") {
+            setTimeout(pw,100);
+        } else {
+            ringostatAnalytics.sendHit('pageview');
+        }
+    };
+
+    pw();
+</script>
+
+</body>
+</html>
